@@ -1,0 +1,767 @@
+{% extends 'allbase.html' %} {% load static%}
+{% block content %}
+{% if user.userType == "Super User"%}
+<div class="row">
+    <div class="col-lg-6">
+        <!--begin::Card-->
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
+                    <a href="./customer/ListCustomerView/" title="View Company">
+                        <h3 class="card-label">Company</h3>
+                    </a>
+                </div>
+                <!--begin::Notifications-->
+                <div class="dropdown">
+                    <!--begin::Toggle-->
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                            <span class="svg-icon svg-icon-xl svg-icon-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24" />
+                                        <rect fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2" />
+                                        <path
+                                            d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z"
+                                            fill="#000000" fill-rule="nonzero" />
+                                        <circle fill="#000000" opacity="0.3" cx="19" cy="6" r="1" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="pulse-ring"></span>
+                        </div>
+                    </div>
+                    <!--end::Toggle-->
+                    <!--begin::Dropdown-->
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                        <!--begin::Content-->
+                        <div class="tab-content">
+                            <!--begin::Tabpane-->
+                            <div class="tab-pane active show p-8" id="topbar_notifications_notifications"
+                                role="tabpanel">
+                                <!--begin::Scroll-->
+                                <div class="scroll pr-7 mr-n7" data-scroll="true" data-height="100"
+                                    data-mobile-height="100">
+                                    <!--begin::Item-->
+                                    <div class="d-flex align-items-center mb-6">
+                                        <!--begin::Symbol-->
+                                        <div class="symbol symbol-40 symbol-light-primary mr-5">
+                                            <span class="symbol-label">
+                                                <span class="svg-icon svg-icon-lg svg-icon-primary">
+                                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                        height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24" />
+                                                            <path
+                                                                d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
+                                                                fill="#000000" />
+                                                            <rect fill="#000000" opacity="0.3"
+                                                                transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
+                                                                x="16.3255682" y="2.94551858" width="3" height="18"
+                                                                rx="1" />
+                                                        </g>
+                                                    </svg>
+                                                    <!--end::Svg Icon-->
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <!--end::Symbol-->
+                                        <!--begin::Text-->
+                                        <div class="d-flex flex-column font-weight-bold">
+                                            <a href="./customer/ListCustomerView/"
+                                                class="text-dark text-hover-primary mb-1 font-size-lg">Active
+                                                Companies</a>
+                                            <span class="text-muted">active</span>
+                                        </div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="d-flex align-items-center mb-6">
+                                        <!--begin::Symbol-->
+                                        <div class="symbol symbol-40 symbol-light-danger mr-5">
+                                            <span class="symbol-label">
+                                                <span class="svg-icon svg-icon-lg svg-icon-danger">
+                                                    <!--begin::Svg Icon | path:assets/media/svg/icons/General/Attachment2.svg-->
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                        height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24" />
+                                                            <path
+                                                                d="M11.7573593,15.2426407 L8.75735931,15.2426407 C8.20507456,15.2426407 7.75735931,15.6903559 7.75735931,16.2426407 C7.75735931,16.7949254 8.20507456,17.2426407 8.75735931,17.2426407 L11.7573593,17.2426407 L11.7573593,18.2426407 C11.7573593,19.3472102 10.8619288,20.2426407 9.75735931,20.2426407 L5.75735931,20.2426407 C4.65278981,20.2426407 3.75735931,19.3472102 3.75735931,18.2426407 L3.75735931,14.2426407 C3.75735931,13.1380712 4.65278981,12.2426407 5.75735931,12.2426407 L9.75735931,12.2426407 C10.8619288,12.2426407 11.7573593,13.1380712 11.7573593,14.2426407 L11.7573593,15.2426407 Z"
+                                                                fill="#000000" opacity="0.3"
+                                                                transform="translate(7.757359, 16.242641) rotate(-45.000000) translate(-7.757359, -16.242641)" />
+                                                            <path
+                                                                d="M12.2426407,8.75735931 L15.2426407,8.75735931 C15.7949254,8.75735931 16.2426407,8.30964406 16.2426407,7.75735931 C16.2426407,7.20507456 15.7949254,6.75735931 15.2426407,6.75735931 L12.2426407,6.75735931 L12.2426407,5.75735931 C12.2426407,4.65278981 13.1380712,3.75735931 14.2426407,3.75735931 L18.2426407,3.75735931 C19.3472102,3.75735931 20.2426407,4.65278981 20.2426407,5.75735931 L20.2426407,9.75735931 C20.2426407,10.8619288 19.3472102,11.7573593 18.2426407,11.7573593 L14.2426407,11.7573593 C13.1380712,11.7573593 12.2426407,10.8619288 12.2426407,9.75735931 L12.2426407,8.75735931 Z"
+                                                                fill="#000000"
+                                                                transform="translate(16.242641, 7.757359) rotate(-45.000000) translate(-16.242641, -7.757359)" />
+                                                            <path
+                                                                d="M5.89339828,3.42893219 C6.44568303,3.42893219 6.89339828,3.87664744 6.89339828,4.42893219 L6.89339828,6.42893219 C6.89339828,6.98121694 6.44568303,7.42893219 5.89339828,7.42893219 C5.34111353,7.42893219 4.89339828,6.98121694 4.89339828,6.42893219 L4.89339828,4.42893219 C4.89339828,3.87664744 5.34111353,3.42893219 5.89339828,3.42893219 Z M11.4289322,5.13603897 C11.8194565,5.52656326 11.8194565,6.15972824 11.4289322,6.55025253 L10.0147186,7.96446609 C9.62419433,8.35499039 8.99102936,8.35499039 8.60050506,7.96446609 C8.20998077,7.5739418 8.20998077,6.94077682 8.60050506,6.55025253 L10.0147186,5.13603897 C10.4052429,4.74551468 11.0384079,4.74551468 11.4289322,5.13603897 Z M0.600505063,5.13603897 C0.991029355,4.74551468 1.62419433,4.74551468 2.01471863,5.13603897 L3.42893219,6.55025253 C3.81945648,6.94077682 3.81945648,7.5739418 3.42893219,7.96446609 C3.0384079,8.35499039 2.40524292,8.35499039 2.01471863,7.96446609 L0.600505063,6.55025253 C0.209980772,6.15972824 0.209980772,5.52656326 0.600505063,5.13603897 Z"
+                                                                fill="#000000" opacity="0.3"
+                                                                transform="translate(6.014719, 5.843146) rotate(-45.000000) translate(-6.014719, -5.843146)" />
+                                                            <path
+                                                                d="M17.9142136,15.4497475 C18.4664983,15.4497475 18.9142136,15.8974627 18.9142136,16.4497475 L18.9142136,18.4497475 C18.9142136,19.0020322 18.4664983,19.4497475 17.9142136,19.4497475 C17.3619288,19.4497475 16.9142136,19.0020322 16.9142136,18.4497475 L16.9142136,16.4497475 C16.9142136,15.8974627 17.3619288,15.4497475 17.9142136,15.4497475 Z M23.4497475,17.1568542 C23.8402718,17.5473785 23.8402718,18.1805435 23.4497475,18.5710678 L22.0355339,19.9852814 C21.6450096,20.3758057 21.0118446,20.3758057 20.6213203,19.9852814 C20.2307961,19.5947571 20.2307961,18.9615921 20.6213203,18.5710678 L22.0355339,17.1568542 C22.4260582,16.76633 23.0592232,16.76633 23.4497475,17.1568542 Z M12.6213203,17.1568542 C13.0118446,16.76633 13.6450096,16.76633 14.0355339,17.1568542 L15.4497475,18.5710678 C15.8402718,18.9615921 15.8402718,19.5947571 15.4497475,19.9852814 C15.0592232,20.3758057 14.4260582,20.3758057 14.0355339,19.9852814 L12.6213203,18.5710678 C12.2307961,18.1805435 12.2307961,17.5473785 12.6213203,17.1568542 Z"
+                                                                fill="#000000" opacity="0.3"
+                                                                transform="translate(18.035534, 17.863961) scale(1, -1) rotate(45.000000) translate(-18.035534, -17.863961)" />
+                                                        </g>
+                                                    </svg>
+                                                    <!--end::Svg Icon-->
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <!--end::Symbol-->
+                                        <!--begin::Text-->
+                                        <div class="d-flex flex-column font-weight-bold">
+                                            <a href="./customer/ListInactiveCustomerView"
+                                                class="text-dark text-hover-primary mb-1 font-size-lg">Awaiting
+                                                Companies / InActive</a>
+                                            <span class="text-muted">inactive</span>
+                                        </div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Item-->
+                                </div>
+                                <!--end::Scroll-->
+                            </div>
+                            <!--end::Tabpane-->
+                        </div>
+                        <!--end::Content-->
+                    </div>
+                    <!--end::Dropdown-->
+                </div>
+                <!--end::Notifications-->
+            </div>
+            <div class="card-body">
+                <!--begin::Chart-->
+                <div id="chart_company"></div>
+                <!--end::Chart-->
+            </div>
+        </div>
+        <!--end::Card-->
+    </div>
+    <div class="col-lg-6">
+        <!--begin::Card-->
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
+                    <a id="link" href="./lead/listlead/" title="View Leads">
+                        <h4 class="card-label leadchart">Leads Chart (Today)</h4>
+                    </a>
+                </div>
+                <!--begin::Notifications-->
+                <div class="dropdown">
+                    <!--begin::Toggle-->
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                            <span class="svg-icon svg-icon-xl svg-icon-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24" />
+                                        <rect fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2" />
+                                        <path
+                                            d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z"
+                                            fill="#000000" fill-rule="nonzero" />
+                                        <circle fill="#000000" opacity="0.3" cx="19" cy="6" r="1" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="pulse-ring"></span>
+                        </div>
+                    </div>
+                    <!--end::Toggle-->
+                    <!--begin::Dropdown-->
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                        <!--begin::Content-->
+                        <div class="tab-content">
+                            <div class="tab-pane active show p-8" id="topbar_notifications_notifications"
+                                role="tabpanel">
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 daychart">Last 7 days</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 daychart">Last Month</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 daychart">All Leads</span>
+                                    </a>
+                                </div>
+                                <!-- <div class="d-flex align-items-center mb-6"> <br>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!--end::Content-->
+                    </div>
+                    <!--end::Dropdown-->
+                </div>
+                <!--end::Notifications-->
+            </div>
+            <div class="card-body">
+                <div id="chart_leads" class="d-flex justify-content-center"></div>
+            </div>
+            <span id="norecordsLead" style="text-align: center;"></span>
+        </div>
+        <!--end::Card-->
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <!--begin::Card-->
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
+                    <a href="./user/employee/list/" title="View Employees">
+                        <h3 class="card-label">Company Employees</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="chartdiv" style="height: 360px;"></div>
+            </div>
+        </div>
+        <!--end::Card-->
+    </div>
+    <div class="col-lg-6">
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
+                    <a id="linkloan" href="./lead/listloan/" title="View Loans">
+                        <h3 class="card-label loanchart">Loan Chart (Today)</h3>
+                    </a>
+                </div>
+                <!--begin::Notifications-->
+                <div class="dropdown">
+                    <!--begin::Toggle-->
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                            <span class="svg-icon svg-icon-xl svg-icon-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24" />
+                                        <rect fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2" />
+                                        <path
+                                            d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z"
+                                            fill="#000000" fill-rule="nonzero" />
+                                        <circle fill="#000000" opacity="0.3" cx="19" cy="6" r="1" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="pulse-ring"></span>
+                        </div>
+                    </div>
+                    <!--end::Toggle-->
+                    <!--begin::Dropdown-->
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                        <!--begin::Content-->
+                        <div class="tab-content">
+                            <div class="tab-pane active show p-8" id="topbar_notifications_notifications"
+                                role="tabpanel">
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 loandayschart">Last 7 days</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 loandayschart">Last Month</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 loandayschart">All Loans</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Content-->
+                    </div>
+                    <!--end::Dropdown-->
+                </div>
+                <!--end::Notifications-->
+            </div>
+            <div class="card-body">
+                <!--begin::Chart-->
+                <div id="chart_loans"></div>
+                <!--end::Chart-->
+            </div>
+            <span id="norecordsLoan" style="text-align: center;"></span>
+        </div>
+    </div>
+</div>
+{%elif user.userType == "Employee"%}
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
+                    <a id="link" href="./lead/listlead/" title="View Leads">
+                        <h4 class="card-label leadchart">Leads Chart (Today)</h4>
+                    </a>
+                </div>
+                <!--begin::Notifications-->
+                <div class="dropdown">
+                    <!--begin::Toggle-->
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                            <span class="svg-icon svg-icon-xl svg-icon-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24" />
+                                        <rect fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2" />
+                                        <path
+                                            d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z"
+                                            fill="#000000" fill-rule="nonzero" />
+                                        <circle fill="#000000" opacity="0.3" cx="19" cy="6" r="1" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="pulse-ring"></span>
+                        </div>
+                    </div>
+                    <!--end::Toggle-->
+                    <!--begin::Dropdown-->
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                        <!--begin::Content-->
+                        <div class="tab-content">
+                            <div class="tab-pane active show p-8" id="topbar_notifications_notifications"
+                                role="tabpanel">
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 daychart">Last 7 days</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 daychart">Last Month</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 daychart">All Leads</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Content-->
+                    </div>
+                    <!--end::Dropdown-->
+                </div>
+                <!--end::Notifications-->
+            </div>
+            <div class="card-body">
+                <div id="chart_leads" class="d-flex justify-content-center"></div>
+            </div>
+            <span id="norecordsLead" style="text-align: center;"></span>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
+                    <a id="linkloan" href="./lead/listloan/" title="View Loans">
+                        <h3 class="card-label loanchart">Loan Chart (Today)</h3>
+                    </a>
+                </div>
+                <!--begin::Notifications-->
+                <div class="dropdown">
+                    <!--begin::Toggle-->
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                            <span class="svg-icon svg-icon-xl svg-icon-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect x="0" y="0" width="24" height="24" />
+                                        <rect fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2" />
+                                        <path
+                                            d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z"
+                                            fill="#000000" fill-rule="nonzero" />
+                                        <circle fill="#000000" opacity="0.3" cx="19" cy="6" r="1" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="pulse-ring"></span>
+                        </div>
+                    </div>
+                    <!--end::Toggle-->
+                    <!--begin::Dropdown-->
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                        <!--begin::Content-->
+                        <div class="tab-content">
+                            <div class="tab-pane active show p-8" id="topbar_notifications_notifications"
+                                role="tabpanel">
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 loandayschart">Last 7 days</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                        title="">
+                                        <span class="font-size-base font-weight-bold mr-2 loandayschart">Last Month</span>
+                                    </a>
+                                    <a class="btn btn-sm btn-light font-weight-bold mr-2"
+                                    title="">
+                                    <span class="font-size-base font-weight-bold mr-2 loandayschart">All Loans</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Content-->
+                    </div>
+                    <!--end::Dropdown-->
+                </div>
+                <!--end::Notifications-->
+            </div>
+            <div class="card-body">
+                <!--begin::Chart-->
+                <div id="chart_loans"></div>
+                <!--end::Chart-->
+            </div>
+            <span id="norecordsLoan" style="text-align: center;"></span>
+        </div>
+    </div>
+</div>
+{%elif user.userType == "Consumer"%}
+{%endif%}
+{% endblock content %}
+
+{% block javascript %}
+	<script>
+        $(".daychart").click(function(e){
+            e.preventDefault();
+            var value= $(this).text()
+            console.log("valuetext",value)
+            $("#chart_leads").empty()
+            $(".leadchart").text("Leads Chart ("+value+")")
+            document.getElementById("link").setAttribute("href","/lead/listlead/"+value);
+            $.ajax({
+				url: '/ajax/validate_leadDateCount/',
+				data: { "value":value},
+				dataType: 'json',
+				success: function (data) {
+					var new1 = data[0]
+					var contact = data[1]
+					var callbck = data[2]
+					var amd = data[3]
+					var notinter = data[4]
+					const apexChart = "#chart_leads";
+					var options = {
+						series: [new1, contact, callbck, amd, notinter],
+						chart: {
+							width: 380,
+							type: 'pie',
+                            events: {
+                                click: function(event, chartContext, config) {
+                                   //window.location.href="./lead/listloan/"+value
+                                  window.open("./lead/listlead/"+value);
+                                },
+                                dataPointSelection: function(event, chartContext, config) {}
+                            }
+						},                      
+						labels: ['New', 'Contacted', 'Call Back', 'AMD', 'Not Interested'],
+						responsive: [{
+							breakpoint: 480,
+							options: {
+								chart: {
+									width: 200
+								},
+								legend: {
+									position: 'bottom'
+								}
+							}
+						}],
+						fill: {
+							colors: ['#0000FF', '#00FF00', '#FFFF00', '#FF0000', '#800080']
+						},
+					};
+					console.log("apexcharts")
+                    
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+                     if (new1 || contact || callbck || amd || notinter != 0){$("#norecordsLead").empty();
+                     }else{$("#norecordsLead").empty().append("No Records Found")}
+				}
+			});
+		
+        })
+        $(".loandayschart").click(function(e){
+            e.preventDefault();
+            var value= $(this).text()
+            console.log("valuetext",value)
+            $("#chart_loans").empty()
+            $(".loanchart").text("Loan Chart ("+value+")")
+            document.getElementById("linkloan").setAttribute("href","/lead/listloan/"+value);
+            $.ajax({
+				url: '/ajax/validate_loanDateCount/',
+				data: { "value":value},
+				dataType: 'json',
+                success: function (data) {
+					var new1 = data[0]
+					var contact = data[1]
+					const apexChart = "#chart_loans";
+					var options = {
+						series: [new1, contact],
+						chart: {
+							width: 380,
+							type: 'pie',
+							events: {
+								click: function(event, chartContext, config) {
+                                // window.location.href="./lead/listloan/"
+                                   window.open("./lead/listloan/"+value);
+								},
+								dataPointSelection: function(event, chartContext, config) {}
+							}
+						},
+						labels: ['Purchase','Refinance'],
+						responsive: [{
+							breakpoint: 480,
+							options: {
+								chart: {
+									width: 200
+								},
+								legend: {
+									position: 'bottom'
+								}
+							}
+						}],
+						fill: {
+							colors: ['#0000FF', '#00FF00', '#FFFF00', '#FF0000', '#800080']
+						},
+					};
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+                    if (new1 || contact  != 0){$("#norecordsLoan").empty();
+                    }else{$("#norecordsLoan").empty().append("No Records Found")}
+           
+					//$("#message").empty().append(data);
+				}
+			});
+		
+        })
+		$(document).ready(function () {
+            // lead chart
+            $.ajax({
+				url: '/ajax/validate_leadCount/',
+				data: {},
+				dataType: 'json',
+				success: function (data) {
+					var new1 = data[0]
+					var contact = data[1]
+					var callbck = data[2]
+					var amd = data[3]
+					var notinter = data[4]
+					const apexChart = "#chart_leads";
+					var options = {
+						series: [new1, contact, callbck, amd, notinter],
+						chart: {
+							width: 380,
+							type: 'pie',
+							events: {
+								click: function(event, chartContext, config) {
+								   window.location.href="./lead/listlead/Today"
+								   //window.open("./lead/listlead/");
+								},
+								dataPointSelection: function(event, chartContext, config) {}
+							}
+						},
+						labels: ['New', 'Contacted', 'Call Back', 'AMD', 'Not Interested'],
+						responsive: [{
+							breakpoint: 480,
+							options: {
+								chart: {
+									width: 200
+								},
+								legend: {
+									position: 'bottom'
+								}
+							}
+						}],
+						fill: {
+							colors: ['#0000FF', '#00FF00', '#FFFF00', '#FF0000', '#800080']
+						},
+					};
+					console.log("apexcharts")
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+                    if (new1 || contact || callbck || amd || notinter != 0){$("#norecordsLead").empty();
+                    }else{$("#norecordsLead").empty().append("No Records Found")}
+					//$("#message").empty().append(data);
+				}
+			});
+			// loan chart
+            $.ajax({
+				url: '/ajax/validate_loanCount/',
+				data: {},
+				dataType: 'json',
+				success: function (data) {
+					var new1 = data[0]
+					var contact = data[1]
+					const apexChart = "#chart_loans";
+					var options = {
+						series: [new1, contact],
+						chart: {
+							width: 380,
+							type: 'pie',
+							events: {
+								click: function(event, chartContext, config) {
+								   window.location.href="./lead/listloan/Today"
+								 // window.open("./lead/listlead/");
+								},
+								dataPointSelection: function(event, chartContext, config) {}
+							}
+						},
+						labels: ['Purchase','Refinance'],
+						responsive: [{
+							breakpoint: 480,
+							options: {
+								chart: {
+									width: 200
+								},
+								legend: {
+									position: 'bottom'
+								}
+							}
+						}],
+						fill: {
+							colors: ['#0000FF', '#00FF00', '#FFFF00', '#FF0000', '#800080']
+						},
+					};
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+                    if (new1 || contact  != 0){$("#norecordsLoan").empty();
+                    }else{$("#norecordsLoan").empty().append("No Records Found")}
+					//$("#message").empty().append(data);
+				}
+			});
+		})
+        // for company chart / active 3 types
+		$(document).ready(function () {
+			$.ajax({
+				url: '/ajax/validate_CompanyCount/',
+				data: {},
+				dataType: 'json',
+				success: function (data) {
+					var new1 = data[0]
+					var contact = data[1]
+					var callbck = data[2]
+					const apexChart = "#chart_company";
+					var options = {
+						series: [new1, contact, callbck],
+						chart: {
+							width: 420,
+							type: 'pie',
+							events: {
+								click: function(event, chartContext, config) {
+								   window.location.href="./customer/ListCustomerView/"
+								},
+								dataPointSelection: function(event, chartContext, config) {}
+							}
+						},
+						labels: ['Mortgage Company', 'Lender', 'Retailer'],
+						responsive: [{
+							breakpoint: 480,
+							options: {
+								chart: {
+									width: 200
+								},
+								legend: {
+									position: 'bottom'
+								}
+							}
+						}],
+						fill: {
+							colors: ['#0000FF', '#00FF00', '#FFFF00', '#FF0000', '#800080']
+						},
+					};
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+				}
+			});
+		})
+        // for company employees chart
+        $(document).ready(function () {
+			$.ajax({
+				url: '/ajax/validate_CompanyNameCount/',
+				data: {},
+				dataType: 'json',
+				success: function (data) {
+					am4core.ready(function() {
+						// Themes begin
+						am4core.useTheme(am4themes_animated);
+						// Themes end
+						let seriesss = [];
+						for (let x = 0; x < data.length; x++) {
+							seriesss.push({
+							  country: data[x].comname,
+							  visits: parseInt(data[x].comtotal),
+							});
+						  }
+						var chart = am4core.create("chartdiv", am4charts.XYChart);
+						chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+						
+						chart.data = seriesss;
+						
+						var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+						categoryAxis.renderer.grid.template.location = 0;
+						categoryAxis.dataFields.category = "country";
+						categoryAxis.renderer.minGridDistance = 40;
+						categoryAxis.fontSize = 12;
+						
+						var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+						valueAxis.min = 0;
+						valueAxis.max = 50;
+						valueAxis.strictMinMax = true;
+						valueAxis.renderer.minGridDistance = 25;
+						
+						var series = chart.series.push(new am4charts.ColumnSeries());
+						series.dataFields.categoryX = "country";
+						series.dataFields.valueY = "visits";
+						series.columns.template.tooltipText = "{valueY.value}";
+						series.columns.template.tooltipY = 0;
+						series.columns.template.strokeOpacity = 0;
+					
+						var label = chart.createChild(am4core.Label);
+						label.text = "Company";
+						label.fontSize = 12;
+						label.align = "center";
+
+                        chart.colors.list = [
+                        am4core.color("#0000FF"),
+                        am4core.color("#00FF00"),
+                        am4core.color("#FFFF00"),
+                        am4core.color("#FF0000"),
+                        am4core.color("#6600FF"),
+                        am4core.color("#FF6F91"),
+                        am4core.color("#D65DB1"),
+                        ];
+						// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+						series.columns.template.adapter.add("fill", function(fill, target) {
+						  return chart.colors.getIndex(target.dataItem.index);
+						});		
+						chart.seriesContainer.events.on("hit", function(ev) {
+							window.location.href="./user/employee/list/"
+						  });	
+					}); 
+				}
+			});
+		})
+        
+	</script>
+	<!-- <script src="{% static 'assets/js/pages/features/charts/amcharts/core.js' %}"></script> -->
+
+	<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+	{% endblock javascript %}
+
+
